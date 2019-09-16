@@ -1083,6 +1083,14 @@ struct ext4_inode_info {
 #define ext4_find_next_zero_bit		find_next_zero_bit_le
 #define ext4_find_next_bit		find_next_bit_le
 
+#define EXT4_MOUNT_USRQUOTA             0x80000 /* "old" user quota,
+                                                 * enable enforcement for hidden
+                                                 * quota files */
+#define EXT4_MOUNT_GRPQUOTA             0x100000 /* "old" group quota, enable
+                                                  * enforcement for hidden quota
+                                                  * files */
+#define EXT4_MOUNT_PRJQUOTA             0x200000 /* Enable project quota
+                                                  * enforcement */
 extern void ext4_set_bits(void *bm, int cur, int len);
 
 /*
